@@ -1,9 +1,10 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import "./ContactItem.css";
 
-const ContactItem = () => {
+const ContactItem = ({ item }) => {
   return (
-    <Row>
+    <Row className="ContactItem">
       <Col lg={2}>
         <img
           width={50}
@@ -12,8 +13,8 @@ const ContactItem = () => {
         />
       </Col>
       <Col lg={10}>
-        <div>정훈</div>
-        <div>010-9909-4748</div>
+        <div>{item.name}</div>
+        <div>{item.phoneNumber}</div>
       </Col>
     </Row>
   );
